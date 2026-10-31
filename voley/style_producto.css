@@ -1,0 +1,372 @@
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .mp-producto {
+    font-family: 'Rajdhani', sans-serif;
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 0 24px;
+  }
+
+  /* ── GRID PRINCIPAL ── */
+  .mp-grid {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* ══════════════════════════════
+     GALERÍA
+  ══════════════════════════════ */
+  .mp-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Imagen principal grande */
+  .mp-galeria-principal {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+    aspect-ratio: 4/3;
+  }
+
+  .mp-galeria-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+
+  .mp-galeria-principal img.mp-fade {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  /* Badge servicio */
+  .mp-foto-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #E8A020;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 11px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  /* Contador de fotos */
+  .mp-foto-counter {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 2;
+    letter-spacing: 0.04em;
+  }
+
+  /* Flechas de navegación */
+  .mp-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.92);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+
+  .mp-arrow:hover { background: #E8A020; }
+  .mp-arrow:hover svg { stroke: #fff; }
+  .mp-arrow svg { width: 16px; height: 16px; stroke: #333; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .mp-arrow-prev { left: 12px; }
+  .mp-arrow-next { right: 12px; }
+
+  /* Miniaturas */
+  .mp-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .mp-thumb {
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
+    background: #ddd;
+  }
+
+  .mp-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  .mp-thumb:hover img { transform: scale(1.06); }
+  .mp-thumb:hover { opacity: 0.9; }
+
+  .mp-thumb.activa {
+    border-color: #E8A020;
+    opacity: 1;
+  }
+
+  /* "Ver más" cuando hay más de 4 fotos */
+  .mp-thumb-more {
+    border-radius: 6px;
+    aspect-ratio: 1/1;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    transition: background 0.2s;
+  }
+  .mp-thumb-more:hover { background: #E8A020; }
+
+  /* ── COLUMNA DERECHA: INFO ── */
+  .mp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4px;
+  }
+
+  .mp-categoria {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #E8A020;
+  }
+
+  .mp-titulo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1a1a1a;
+  }
+
+  .mp-divider {
+    width: 40px;
+    height: 3px;
+    background: #E8A020;
+    border-radius: 2px;
+  }
+
+  .mp-descripcion {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  /* ── CARACTERÍSTICAS (chips) ── */
+  .mp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .mp-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    background: #f4f2ef;
+    border: 1px solid #e2ddd6;
+    border-radius: 20px;
+    padding: 5px 12px;
+  }
+
+  .mp-chip svg {
+    width: 13px; height: 13px;
+    stroke: #E8A020; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  /* ── REDES SOCIALES ── */
+  .mp-compartir { border-top: 1px solid #ede9e2; padding-top: 16px; }
+  .mp-compartir-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #999; margin-bottom: 10px;
+  }
+  .mp-redes { display: flex; gap: 8px; flex-wrap: wrap; }
+  .mp-red {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px; font-weight: 600;
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 6px;
+    border: 1px solid #e2ddd6;
+    color: #333; background: #fff;
+    transition: all 0.2s;
+  }
+  .mp-red:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .mp-red.fb:hover { background: #1877F2; color: #fff; border-color: #1877F2; }
+  .mp-red.wa:hover { background: #25D366; color: #fff; border-color: #25D366; }
+  .mp-red.li:hover { background: #0A66C2; color: #fff; border-color: #0A66C2; }
+  .mp-red svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+
+  /* ── LIGHTBOX ── */
+  .mp-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mp-lightbox.abierto { display: flex; }
+  .mp-lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  .mp-lb-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  .mp-lb-close:hover { opacity: 1; }
+  .mp-lb-nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .mp-lb-btn {
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .mp-lb-btn:hover { background: #E8A020; }
+  .mp-lb-counter { color: rgba(255,255,255,0.6); font-size: 13px; }
+
+  /* ── BOTÓN CONTACTO ── */
+  .mp-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #E8A020;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 13px 22px;
+    border-radius: 7px;
+    transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+  }
+
+  .mp-cta:hover {
+    background: #bf1e2e !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+
+  .mp-cta svg {
+    width: 16px; height: 16px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round; stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .mp-botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+
+  /* ── BOTÓN PDF ── */
+  .mp-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 13px 20px;
+    border-radius: 7px;
+    transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+  }
+
+  .mp-pdf-btn:hover {
+    background: #bf1e2e !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+
+  .mp-pdf-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .mp-grid { grid-template-columns: 1fr; gap: 24px; }
+    .mp-titulo { font-size: 26px; }
+    .mp-thumbs { grid-template-columns: repeat(4, 1fr); }
+  }
+

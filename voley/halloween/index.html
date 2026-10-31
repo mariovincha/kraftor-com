@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domingos de Voley - Reto de Juego Halloween</title>
+  <meta name="description" content="Reto de Juego Halloween de Domingos de Voley: domingo 1ero de noviembre, 3 equipos de 6 jugadores, S/ 25 por persona y un pozo para el equipo que gane más sets.">
+  <link rel="icon" href="images/logo-vd.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261028">
+</head>
+<body>
+
+  <!-- Murciélago reutilizable -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="murcielago" viewBox="0 0 40 14">
+      <path d="M0,6 Q6,-4 14,4 Q18,0 20,6 Q22,0 26,4 Q34,-4 40,6 Q34,5 30,10 Q27,7 25,12 L20,8 L15,12 Q13,7 10,10 Q6,5 0,6Z"/>
+    </symbol>
+  </svg>
+
+  <!-- ===================== HERO (banner nocturno) ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__luna" aria-hidden="true"></div>
+    <svg class="bat bat--1" viewBox="0 0 40 14" aria-hidden="true"><use href="#murcielago"/></svg>
+    <svg class="bat bat--2" viewBox="0 0 40 14" aria-hidden="true"><use href="#murcielago"/></svg>
+    <svg class="bat bat--3" viewBox="0 0 40 14" aria-hidden="true"><use href="#murcielago"/></svg>
+    <div class="hero__red" aria-hidden="true"></div>
+    <img class="hero__calabaza" src="images/calabaza.png" alt="Calabaza de Halloween con sombrero de bruja" width="285" height="400">
+
+    <header class="header">
+      <a class="marca" href="index.html">
+        <img src="images/logo-vd.png" alt="Logo Domingos de Voley" width="56" height="56">
+        <span>Domingos<br>de Voley</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+      <label for="nav-toggle" class="nav-boton">MENÚ</label>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqMQHU-ga1ztWFVBHJyeUwqbNZQmS3IwM6XKap-wFKDAFg8A/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Registro</a>
+        <a href="jugadores.html">Jugadores</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="premios.html">Premios</a>
+        <a href="https://wa.me/51958317484" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+      </nav>
+    </header>
+
+    <div class="hero__contenido">
+      <h1 class="hero__titulo">
+        <span class="hero__titulo-1">DOMINGOS DE</span>
+        <span class="hero__titulo-2">VOLEY</span>
+      </h1>
+
+      <div class="hero__linea">
+        <div class="tag-reto">RETO DE JUEGO</div>
+        <p class="hero__lema">¡Nos vemos en la cancha con toda la actitud!</p>
+      </div>
+
+      <div class="botones">
+                <a class="btn btn--primario" href="equipos.html">Ver los equipos</a>
+        <a class="btn btn--borde" href="jugadores.html">Ver jugadores</a>
+      </div>
+
+      <p class="hero__nota">Voley, risas y espíritu <span>Halloween</span></p>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ===================== TICKET / FIXTURE ===================== -->
+    <div class="ticket-bloque" id="fixture">
+      <div class="ticket">
+        <div class="ticket__col">
+          <div class="ticket__sup">TICKET DE ENTRADA · HALLOWEEN</div>
+          <div class="ticket__dia">1ERO</div>
+          <div class="ticket__mes">DE NOVIEMBRE · DOMINGO</div>
+        </div>
+        <div class="ticket__col">
+          <div class="ticket__dato"><small>HORA</small>6 PM</div>
+          <div class="ticket__dato"><small>LUGAR</small>La Bombonera - Surquillo</div>
+        </div>
+        <a class="ticket__col ticket__col--link" href="equipos.html" aria-label="Ver los equipos">
+          <div>
+            <div class="ticket__sup">YA ESTÁN ARMADOS</div>
+            <div class="ticket__precio">A · B · C</div>
+          </div>
+          <div class="ticket__eq">3 EQUIPOS<span>6 jugadores c/u</span><span class="ticket__ver">Ver los equipos →</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===================== ASÍ SE JUEGA ===================== -->
+    <section class="juego" id="bases">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Así se juega el <span>reto</span></h2>
+
+        <div class="pasos">
+          <article class="paso">
+            <div class="paso__n">1</div>
+            <h3>Regístrate</h3>
+            <p>Hay 18 cupos en total: 3 equipos de 6 jugadores.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__n">2</div>
+            <h3>Aporta S/ 25</h3>
+            <p>El monto restante se junta en un pozo.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__n">3</div>
+            <h3>Juega y gana</h3>
+            <p>El equipo que gane más sets el domingo se lleva el pozo.</p>
+          </article>
+        </div>
+
+        <div class="pozo">
+          <div class="pozo__titulo">EL POZO</div>
+          <p>El monto restante se juntará en un pozo que será entregado al equipo que gane más set en el juego del domingo en mención.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== JUGADORES (vista previa) ===================== -->
+    <section class="jugadores" id="registro">
+      <div class="contenedor">
+        <div class="jugadores__cab">
+          <h2 class="titulo-seccion">Ya están <span>en la cancha</span></h2>
+          <a class="enlace-ver" href="jugadores.html">Ver todos los jugadores</a>
+        </div>
+
+        <div class="grid-jugadores">
+          <article class="card-jugador">
+            <img src="images/jugadores/alessandra-begazo.jpg" alt="Alessandra Begazo" width="318" height="320">
+            <div class="card-jugador__info">
+              <h3>Alessandra Begazo</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/gracia-torres.jpg" alt="Gracia Torres" width="532" height="625">
+            <div class="card-jugador__info">
+              <h3>Gracia Torres</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/aldair-quispe.jpg" alt="Aldair Quispe" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Aldair Quispe</h3>
+              <div class="posiciones"><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/cristian-amasifen.jpg" alt="Cristian Amasifen" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Cristian Amasifen</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/jordano-panduro.jpg" alt="Jordano Panduro" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Jordano Panduro</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/angel-cabrera.jpg" alt="Angel Cabrera" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Angel Cabrera</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/mario-vincha.jpg" alt="Mario Vincha" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Mario Vincha</h3>
+              <div class="posiciones"><span class="pos">OPUESTO</span><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/pablo-castro.jpg" alt="Pablo Moore" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Pablo Moore</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/josue-garcia.jpg" alt="Josué García" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Josué García</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/marco-milachay.jpg" alt="Marco Milachay" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Marco Milachay</h3>
+              <div class="posiciones"><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/lesly-cabello.jpg" alt="Lesly Cabello" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Lesly Cabello</h3>
+              <div class="posiciones"><span class="pos">ARMADO</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/alexis-quenaya.jpg" alt="Alexis Quenaya" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Alexis Quenaya</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/tony-sanabria.jpg" alt="Tony Sanabria" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Tony Sanabria</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">CENTRAL</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/jose-velasquez.jpg" alt="José Velasquez" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>José Velasquez</h3>
+              <div class="posiciones"><span class="pos">PUNTA</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/anthony-castillo.jpg" alt="Anthony Castillo" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Anthony Castillo</h3>
+              <div class="posiciones"><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+          <article class="card-jugador">
+            <img src="images/jugadores/richard-castro.jpg" alt="Richard Castro" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Richard Castro</h3>
+              <div class="posiciones"><span class="pos">ARMADO</span><span class="pos">OPUESTO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/jose-zavala.jpg" alt="José Antonio Zavala" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>José Antonio Zavala</h3>
+              <div class="posiciones"><span class="pos">ARMADO</span></div>
+            </div>
+          </article>
+
+          <article class="card-jugador">
+            <img src="images/jugadores/xavier-ramos.jpg" alt="Xavier Ramos" width="800" height="1000">
+            <div class="card-jugador__info">
+              <h3>Xavier Ramos</h3>
+              <div class="posiciones"><span class="pos">CENTRAL</span><span class="pos">PUNTA</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__fila">
+      <p class="footer__lema">¡La diversión también es un juego!</p>
+      <p class="footer__datos">
+        <a href="tel:+51958317484">+51 958 317 484</a> ·
+        <a href="mailto:info@kraftor.com">info@kraftor.com</a><br>
+        © 2026 Domingos de Voley. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
